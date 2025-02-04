@@ -1,0 +1,104 @@
+/* The wrapper takes up the entire viewport and centers its content */
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The Card is the centered container with a dark grey background */
+.card {
+  background-color: darkgrey;
+  width: 400px; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
+  display: flex;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for a subtle lift */
+  border-radius: 10px; /* Rounded borders */
+  overflow: hidden; /* Clip inner containers to the card's border-radius */
+}
+
+/* The left container takes 30% of the Card and has a black background */
+.left-container {
+  width: 35%;
+  background-color: black;
+  padding: 15px;
+  display: flex;
+  flex-direction: column; /* Enables vertical alignment */
+}
+/* Title container styling */
+.company-container {
+  /* padding: 20px; */
+  color: white;
+  width: 100%;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Image container styling */
+.image-container {
+  margin: auto;
+  overflow: hidden; /* Ensures image follows the rounded border */
+
+  align-self: center; /* Centers horizontally */
+  width: 80px; /* Set fixed width and height to make it a circle */
+  height: 80px;
+  border-radius: 50%; /* Makes it a perfect circle */
+  overflow: hidden; /* Ensures image does not exceed rounded borders */
+  display: flex; /* Center image inside */
+  justify-content: center;
+  align-items: center;
+
+  /* Option 1: Rely on the card's overflow: hidden to enforce the border-radius */
+  /* Option 2: Apply additional rounding to just the image if needed */
+}
+
+/* Image styling */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the circle without distortion */
+}
+
+/* The right container occupies the remaining space (70%) */
+.right-container {
+  width: 65%;
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column; /* Enables vertical alignment */
+  background-color: rgb(121, 121, 225); /* You can change this as needed */
+}
+.designation-container {
+  display: flex;
+  justify-content: space-between;
+}
+.name {
+  font-weight: bold;
+  font-size: 14px;
+}
+.designation {
+  font-size: 12px;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.services-container {
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.services-title-container {
+  font-weight: bold;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(218, 214, 214);
+}
