@@ -29,7 +29,7 @@
 /* The left container takes 30% of the Card and has a black background */
 .left-container {
   width: 35%;
-  background-color: black;
+  background-color: #000000;
   padding: 15px;
   display: flex;
   flex-direction: column; /* Enables vertical alignment */
@@ -37,7 +37,7 @@
 /* Title container styling */
 .company-container {
   /* padding: 20px; */
-  color: white;
+  color: #dfdfe1;
   width: 100%;
   font-size: 13px;
   text-align: center;
@@ -75,7 +75,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column; /* Enables vertical alignment */
-  background-color: rgb(85, 85, 242);
+  background-color: #196cb9;
 }
 .designation-container {
   display: flex;
@@ -85,10 +85,12 @@
   font-weight: bold;
   font-size: 14px;
   margin-bottom: 5px;
+  color: #f4feff;
 }
 .designation {
   font-size: 12px;
   margin-bottom: 5px;
+  color: #edf0fd;
 }
 
 .menu-options {
@@ -164,7 +166,8 @@
   height: 1px;
   margin-top: 10px;
   margin-bottom: 5px;
-  background-color: rgb(218, 214, 214);
+  background-color: #9ea7b8;
+  color: #9ea7b8;
 }
 .social-container {
   display: flex;
