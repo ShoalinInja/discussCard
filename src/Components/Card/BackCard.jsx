@@ -16,6 +16,7 @@ const BackCard = () => {
     if (!isAnimating) {
       setIsFlipped(!isFlipped);
       setIsAnimating(true);
+      setMenuOpen(false);
     }
   };
   const [service, setService] = useState([
@@ -61,21 +62,73 @@ const BackCard = () => {
                   <div className="services-title-container">Contact</div>
                   <div className="service">
                     <div className="contact-phone-container">
-                      <Phone style={{ color: "black", fontSize: "18px" }} />
-                      <span>81085 46589</span>
+                      <a
+                        href="tel:8108546589"
+                        style={{
+                          textDecoration: "none",
+                          color: "black",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "8px",
+                        }}
+                      >
+                        <Phone style={{ color: "black", fontSize: "18px" }} />
+                        <span>81085 46589</span>
+                      </a>
                     </div>
                     <div className="contact-email-container">
-                      <Email style={{ color: "black", fontSize: "18px" }} />
-                      <span>shaikh.injamul06905@gmail.com</span>
+                      <a
+                        href="mailto:shaikh.injamul06905@gmail.com"
+                        style={{
+                          textDecoration: "none",
+                          color: "black",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "8px",
+                        }}
+                      >
+                        <Email style={{ color: "black", fontSize: "18px" }} />
+                        <span>shaikh.injamul06905@gmail.com</span>
+                      </a>
                     </div>
                   </div>
                 </div>
 
                 <div className="social-container">
-                  <Instagram style={{ color: "white", fontSize: "20px" }} />
-                  <WhatsApp style={{ color: "white", fontSize: "20px" }} />
-                  <Facebook style={{ color: "white", fontSize: "20px" }} />
-                  <LinkedIn style={{ color: "white", fontSize: "20px" }} />
+                  <a
+                    href="https://www.instagram.com/your_username"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Instagram style={{ color: "white", fontSize: "20px" }} />
+                  </a>
+
+                  {/* WhatsApp */}
+                  <a
+                    href="https://wa.me/8108546589"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <WhatsApp style={{ color: "white", fontSize: "20px" }} />
+                  </a>
+
+                  {/* Facebook */}
+                  <a
+                    href="https://www.facebook.com/your_username"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Facebook style={{ color: "white", fontSize: "20px" }} />
+                  </a>
+
+                  {/* LinkedIn */}
+                  <a
+                    href="https://www.linkedin.com/in/your_username"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LinkedIn style={{ color: "white", fontSize: "20px" }} />
+                  </a>
                 </div>
               </div>
             </div>
@@ -108,8 +161,8 @@ const BackCard = () => {
                 />
                 {menuOpen && (
                   <div className="menu-options">
+                    <button>Edit</button>
                     <button>Delete</button>
-                    <button>{disabled ? "Enable" : "Disable"}</button>
                   </div>
                 )}
               </div>
