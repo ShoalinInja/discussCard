@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./frontCard.css";
+import "./backCard.css";
 import MoreVertIcon from "@mui/icons-material/MoreVert"; // Material UI 3-dot menu icon
-const FrontCard = () => {
+const BackCard = () => {
   const [service, setService] = useState([
     "service 1",
     "service 2",
@@ -12,7 +12,7 @@ const FrontCard = () => {
       <div className="card">
         <div className="left-container">
           {/* Content for the left container goes here */}
-          <div className="company-container">Levon Techno</div>
+          <div className="company-container"> F Levon Techno</div>
 
           <div className="image-container">
             <img
@@ -52,4 +52,4 @@ const FrontCard = () => {
   );
 };
 
-export default FrontCard;
+export default BackCard;

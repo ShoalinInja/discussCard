@@ -1,9 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
-import FrontCard from "./Components/Card/FrontCard";
+import BackCard from "./Components/Card/BackCard";
 
 function App() {
-  return <FrontCard />;
+  return <BackCard />;
 }
 
 export default App;
