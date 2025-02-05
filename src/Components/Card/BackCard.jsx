@@ -60,7 +60,7 @@ const BackCard = () => {
               <div className="contact-container">
                 <div className="services-container">
                   <div className="services-title-container">Contact</div>
-                  <div className="service">
+                  <div className="service" onClick={(e) => e.stopPropagation()}>
                     <div className="contact-phone-container">
                       <a
                         href="tel:8108546589"
@@ -86,6 +86,7 @@ const BackCard = () => {
                           alignItems: "center",
                           gap: "8px",
                         }}
+                        onClick={(e) => e.stopPropagation()}
                       >
                         <Email style={{ color: "black", fontSize: "18px" }} />
                         <span>shaikh.injamul06905@gmail.com</span>
@@ -99,6 +100,7 @@ const BackCard = () => {
                     href="https://www.instagram.com/your_username"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <Instagram style={{ color: "white", fontSize: "20px" }} />
                   </a>
@@ -108,6 +110,7 @@ const BackCard = () => {
                     href="https://wa.me/8108546589"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <WhatsApp style={{ color: "white", fontSize: "20px" }} />
                   </a>
@@ -117,6 +120,7 @@ const BackCard = () => {
                     href="https://www.facebook.com/your_username"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <Facebook style={{ color: "white", fontSize: "20px" }} />
                   </a>
@@ -126,6 +130,7 @@ const BackCard = () => {
                     href="https://www.linkedin.com/in/your_username"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <LinkedIn style={{ color: "white", fontSize: "20px" }} />
                   </a>
@@ -179,8 +184,23 @@ const BackCard = () => {
                     </div>
                   ))}
                 </div>
-
-                <div className="link-container">www.google.com</div>
+                <a
+                  href="https://www.google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()} // Prevent flip
+                  style={{ textDecoration: "none" }} // Remove default underline
+                >
+                  <div
+                    style={{
+                      cursor: "pointer", // Ensures it's clickable\
+                      textDecoration: "none", // Adds underline like a normal link
+                      color: "black",
+                    }}
+                  >
+                    www.google.com
+                  </div>
+                </a>
               </div>
             </div>
           </div>
