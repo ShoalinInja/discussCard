@@ -26,7 +26,7 @@ const BackCard = () => {
   ]);
 
   return (
-    <div className="wrapper">
+    <div className="mobile-wrapper">
       <div className="card" onClick={handleFlip}>
         <motion.div
           className="flip-card-inner"
@@ -38,7 +38,6 @@ const BackCard = () => {
           <div className="flip-card-front">
             <div className="left-container">
               {/* Content for the left container goes here */}
-              <div className="company-container"> F Levon Techno</div>
 
               <div className="image-container">
                 <img
@@ -55,24 +54,25 @@ const BackCard = () => {
                   <div className="designation">CTO</div>
                 </div>
               </div>
-              <div className="divider"></div>
+              <svg class="divider-svg" width="100%" height="10">
+                <line
+                  x1="0"
+                  y1="5"
+                  x2="100%"
+                  y2="5"
+                  stroke="#fff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
               {/* Content for the left container goes here */}
               <div className="contact-container">
                 <div className="services-container">
                   <div className="services-title-container">Contact</div>
                   <div className="service" onClick={(e) => e.stopPropagation()}>
                     <div className="contact-phone-container">
-                      <a
-                        href="tel:8108546589"
-                        style={{
-                          textDecoration: "none",
-                          color: "black",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "8px",
-                        }}
-                      >
-                        <Phone style={{ color: "black", fontSize: "18px" }} />
+                      <a href="tel:8108546589">
+                        <Phone style={{ color: "white", fontSize: "18px" }} />
                         <span>81085 46589</span>
                       </a>
                     </div>
@@ -81,15 +81,17 @@ const BackCard = () => {
                         href="mailto:shaikh.injamul06905@gmail.com"
                         style={{
                           textDecoration: "none",
-                          color: "black",
+                          color: "white",
                           display: "flex",
                           alignItems: "center",
                           gap: "8px",
                         }}
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <Email style={{ color: "black", fontSize: "18px" }} />
-                        <span>shaikh.injamul06905@gmail.com</span>
+                        <Email style={{ color: "white", fontSize: "18px" }} />
+                        <div className="email">
+                          shaikh.injamul06905@gmail.com
+                        </div>
                       </a>
                     </div>
                   </div>

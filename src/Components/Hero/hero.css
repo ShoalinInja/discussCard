@@ -1,0 +1,60 @@
+.contact-card {
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.contact-designation {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.divider {
+  width: 200px;
+  height: 2px;
+  background-color: #391a9e;
+  color: #fff;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #444;
+  margin: 5px 0;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.save-contact {
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.save-contact:hover {
+  background: #0056b3;
+}

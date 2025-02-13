@@ -1,29 +1,50 @@
 /* The wrapper takes up the entire viewport and centers its content */
-.wrapper {
-  height: 100vh;
-  width: 100vw;
-  background-color: lightgrey;
+.mobile-wrapper {
+  /* Overlapping effect */
+  position: relative;
+  margin-top: -20%; /* Move it up by 50% of its height */
+  z-index: 3;
+  width: 100%;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
 /* The Card is the centered container with a dark grey background */
 .card {
   background-color: transparent;
-  width: 400px; /* Adjust width as needed */
-  height: 200px; /* Adjust height as needed */
+  width: 100%; /* Adjust width as needed */
   display: flex;
-  border-radius: 10px; /* Rounded borders */
   overflow: hidden; /* Clip inner containers to the card's border-radius */
+  transform-style: preserve-3d; /* Important for 3D effect */
+  transition: transform 0.6s ease-in-out;
 }
-.flip-card-inner,
+.flip-card {
+  perspective: 1000px;
+}
+.flip-card-inner {
+  transition: transform 0.6s;
+  height: 200px;
+  width: 100%;
+  transform-style: preserve-3d;
+}
+
 .flip-card-front,
 .flip-card-back {
-  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
   display: flex;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 200px;
   width: 100%;
-  border-radius: 10px; /* Rounded borders */
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
 }
 
 /* The left container takes 30% of the Card and has a black background */
@@ -39,7 +60,7 @@
   /* padding: 20px; */
   color: #dfdfe1;
   width: 100%;
-  font-size: 13px;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -56,9 +77,6 @@
   display: flex; /* Center image inside */
   justify-content: center;
   align-items: center;
-
-  /* Option 1: Rely on the card's overflow: hidden to enforce the border-radius */
-  /* Option 2: Apply additional rounding to just the image if needed */
 }
 
 /* Image styling */
@@ -83,12 +101,12 @@
 }
 .name {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 5px;
   color: #f4feff;
 }
 .designation {
-  font-size: 12px;
+  font-size: 16px;
   margin-bottom: 5px;
   color: #edf0fd;
 }
@@ -133,6 +151,7 @@
 .contact-container {
   display: flex;
   flex-direction: column;
+  color: #fff;
   height: 100%;
   justify-content: space-between;
 }
@@ -150,7 +169,6 @@
   font-size: 13px;
   margin-top: 2px;
   gap: 5px;
-  overflow: hidden;
 }
 .contact-email-container {
   font-size: 13px;
@@ -158,20 +176,44 @@
   display: flex;
   gap: 5px;
   white-space: "nowrap";
-  overflow: "hidden";
-  text-overflow: "ellipsis";
 }
 .divider {
   width: 100%;
-  height: 1px;
+  height: 2px;
   margin-top: 10px;
   margin-bottom: 5px;
-  background-color: #9ea7b8;
-  color: #9ea7b8;
+  background-color: #fff;
+  color: #fff;
+}
+.contact-phone-container a {
+  max-width: 100%; /* Ensure it doesn't grow beyond the container */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden; /* Needed to apply ellipsis */
+  text-decoration: none;
+  color: white;
+}
+.contact-email-container a {
+  max-width: 100%; /* Ensure it doesn't grow beyond the container */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden; /* Needed to apply ellipsis */
+  text-decoration: none;
+  color: white;
+}
+.contact-email-container .email {
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Hides overflow */
+  text-overflow: ellipsis; /* Shows "..." when text is cut */
+  display: inline-block; /* Ensures ellipsis works */
 }
 .social-container {
   display: flex;
   width: 100%;
   justify-content: space-around;
   align-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
 }
